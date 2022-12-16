@@ -27,7 +27,8 @@ namespace ECommerce.Persistence.Repositories
            return Table.Where(method);
         }
 
-        public async Task<T> GetByIdAsync(string id) => await Table.FirstOrDefaultAsync(t => t.Id == Guid.Parse(id));
+        public async Task<T> GetByIdAsync(string id) => await Table.FindAsync(Guid.Parse(id));
+            //Table.FirstOrDefaultAsync(t => t.Id == Guid.Parse(id));
 
         public async Task<T> GetSingleAsync(Expression<Func<T, bool>> method) => await Table.FirstOrDefaultAsync(method);
 
