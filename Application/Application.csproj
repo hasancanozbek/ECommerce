@@ -11,22 +11,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="13.0.1" />
-    <PackageReference Include="MediatR" Version="12.4.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="Core.Application" Version="1.0.0" />
+    <PackageReference Include="Core.Persistence" Version="1.0.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Core.Application">
-      <HintPath>..\..\..\Core.Pakages\Core.Application\bin\Debug\net8.0\Core.Application.dll</HintPath>
-    </Reference>
-    <Reference Include="Core.Persistence">
-      <HintPath>..\..\..\Core.Pakages\Core.Persistence\bin\Debug\net8.0\Core.Persistence.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
