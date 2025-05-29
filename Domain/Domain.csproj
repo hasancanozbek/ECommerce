@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Core.Application" Version="1.0.0" />
+    <Reference Include="Core.Application">
+      <HintPath>..\..\Net.Core.Pakages\Core.Application\bin\Debug\net8.0\Core.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.CrossCuttingConcerns">
+      <HintPath>..\..\Net.Core.Pakages\Core.CrossCuttingConcerns\bin\Debug\net8.0\Core.CrossCuttingConcerns.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Persistence">
+      <HintPath>..\..\Net.Core.Pakages\Core.Persistence\bin\Debug\net8.0\Core.Persistence.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

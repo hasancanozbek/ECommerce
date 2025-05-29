@@ -5,7 +5,6 @@ using Application.Features.Categories.Queries.GetById;
 using Application.Features.Categories.Queries.GetList;
 using Core.Application.Requests;
 using Core.Application.Responses;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers

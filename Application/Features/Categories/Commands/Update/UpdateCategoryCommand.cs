@@ -1,15 +1,22 @@
 ﻿
 using Application.Services.Repositories;
 using AutoMapper;
+using Core.Application.Pipelines.Caching;
 using Domain.Entities;
 using MediatR;
 
 namespace Application.Features.Categories.Commands.Update
 {
-    public class UpdateCategoryCommand : IRequest<UpdatedCategoryResponse>
+    public class UpdateCategoryCommand : IRequest<UpdatedCategoryResponse>, ICacheRemoverRequest
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+
+        public string CacheKey => string.Empty;
+
+        public bool BypassCache => false;
+
+        public string? CacheGroupKey => "GetCategories";
 
         public class UpdateCategoryCommandHandler : IRequestHandler<UpdateCategoryCommand, UpdatedCategoryResponse>
         {
